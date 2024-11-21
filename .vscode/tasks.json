@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile mathlib.cpp",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-c",
+                "mathlib.cpp",
+                "-o",
+                "mathlib.obj"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Create Static Library",
+            "type": "shell",
+            "command": "ar",
+            "args": [
+                "rcs",
+                "mathlib.lib",
+                "mathlib.obj"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
