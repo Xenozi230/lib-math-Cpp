@@ -1,4 +1,4 @@
-#include "mathlib.h"
+#include "mathlib.hpp"
 #include <cmath>
 #include <stdexcept>
 
